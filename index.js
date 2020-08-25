@@ -34,6 +34,13 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json({extended: true}));
 
+// TODO: TESTING/REMOVE - An api endpoint that returns a short list of items
+app.get('/api/getList', (req, res) => {
+    const list = ["item1", "item2", "item3"];
+    res.json(list);
+    console.log('Sent list of items');
+});
+
 app.use('/api', registrationRouter);
 app.use('/api', loginRouter);
 app.use('/api', userRouter);
