@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /react/hackadoo/hackadoo-be/config/local.js
+/config/local.js
 
 # testing
 /coverage

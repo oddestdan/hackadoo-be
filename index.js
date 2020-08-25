@@ -8,9 +8,6 @@ const cors = require('cors');
 
 const {port: serverPort} = config.get('webServer');
 const mongoURI = config.get('mongoURI');
-const registrationRouter = require('./server/api/auth/registration');
-const loginRouter = require('./server/api/auth/login');
-const userRouter = require('./server/api/routes/user');
 
 const start = async () => {
     try {
@@ -34,9 +31,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json({extended: true}));
 
-app.use('/api', registrationRouter);
-app.use('/api', loginRouter);
-app.use('/api', userRouter);
+app.use("/api/auth", require("./server/routes/auth.routes"));
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));

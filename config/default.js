@@ -10,6 +10,7 @@ module.exports = {
     'port': 30000,
     'name': 'hackadoo_app',
   },
+  'GOOGLE_CLIENT_ID': 'hN0D2XT7J5Zys8anX6pmt1ZAdkl1XUoM',
   'mongoURI': 'mongodb+srv://admin:AUfv1ucUnf07JJrw@cluster0.dng65.gcp.mongodb.net/app?retryWrites=true&w=majority',
 
 
