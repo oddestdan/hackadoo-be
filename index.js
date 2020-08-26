@@ -33,6 +33,7 @@ app.use(express.json({extended: true}));
 
 
 app.use("/api/auth", require("./server/routes/auth.routes"));
+app.use("/api/user", require("./server/routes/cv.routes"));
 
 // TODO: TESTING/REMOVE - An api endpoint that returns a short list of items
 app.get('/api/getList', (req, res) => {
